@@ -33,6 +33,7 @@ const items = [
     }
 ];
 
+// Where to add new tournaments
 const tournaments = [
     {
         name: "Reach for Gold",
