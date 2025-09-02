@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Mate+SC&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+#background {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(100, 97, 97);
+    background-image: url("./images/black_and_gold_bg.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#header { 
+    background-color: black;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.homepage-button {
+    margin: 10px;
+    font-size: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    color: white;
+}
+
+.homepage-button:hover {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+#image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+#image-wrapper-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+}
+
+.image-box {
+    background-color: transparent;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    text-align: center;
+    font-feature-settings: "med2";
+    font-size: larger;
+    flex-direction: column;
+}
+
+#contentBox {
+    width: 80%;
+    background-color: #222;
+    color: white;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+    position: relative;
+    top: 100px;
+    margin-bottom: 100px;
+}
+
+#homeWrapper {
+    top: 100px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#tournamentsWrapper {
+    top: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#itemsWrapper { 
+    top: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#communityWrapper {
+    top: 100px;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#discordWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+    background-color: #5165f6;
+    cursor: pointer;
+    position: relative;
+}
+
+#youtubeWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#tournamentCountdownWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tournamentCountdownLabel {
+    color: white;
+    font-size: 48px;
+    margin: 0;
+}
+
+#tournamentCountdownContent {
+    color: white;
+    font-size: 48px;
+}
+
+#tournamentBox {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    background-color: #222;
+    border: 5px solid black;
+    width: 80vw;
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tournamentItemWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.tournamentName {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.tournamentDate {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+.youtubeItemWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    margin: 20px;
+    border: 5px solid black;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+.youtubeImage {
+    width: 100px;
+    height: auto;
+}
+
+.youtubeLabel {
+    font-size: 24px;
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+}
+
+#discordImage {
+    width: 100px;
+    height: 100px;
+}
+
+#discordLabel {
+    height: 100px;
+    background-color: #5165f6;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+    width: 100%;
+}
+
+#discordLink {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.youtubeLink {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#homeTitle {
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+#homeDescription {
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black, 0 0 20px black;
+    color: white;
+}
+
+#contentWrapper {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+#staffHeader {
+    font-size: 50px;
+}
+
+#staffWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.staffItemWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 310px;
+    border: 3px solid black;
+    background-image: linear-gradient(to top right, gold, white);
+    margin: 10px;
+}
+
+.staffLabels {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    width: 100%;
+    font-size: 18px;
+}
+
+.staffPicture {
+    width: 100px;
+    height: 100px;
+}
+
+#itemDisplayWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #222;
+    border: 5px solid black;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.itemWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: purple;
+    padding: 10px;
+    border: 3px solid black;
+    color: white;
+    width: 150px;
+    margin: 20px;
+}
+
+.itemImage {
+    width: 100px;
+    height: auto;
+}
+
+.itemLabel {
+    margin: 10px 0;
+}
+
+.itemType {
+    margin: 0 0 10px 0;
+}
+
+.valueWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.valueLabel {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+}
+
+.valueField {
+    font-size: 16px;
+    text-align: right;
+    margin: 0;
+}
