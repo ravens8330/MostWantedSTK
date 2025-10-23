@@ -3,10 +3,6 @@ const filterOptions = [
     "Type",
     "MW Value (low - high)",
     "MW Value (high - low)",
-    "Galaxy Value (low - high)",
-    "Galaxy Value (high - low)",
-    "STK value (low - high)",
-    "STK value (high - low)"
 ];
 
 let itemFilterText = "";
@@ -177,26 +173,11 @@ function itemsButton() {
             <p class="valueField">${numberWithCommas(items[i].mwvalue)}</p>
         `;
 
-        let itemGalaxyValueWrapper = document.createElement("div");
-        itemGalaxyValueWrapper.className = "valueWrapper";
-        itemGalaxyValueWrapper.innerHTML = `
-            <p class="valueLabel">Galaxy Value:</p>
-            <p class="valueField">${numberWithCommas(items[i].galaxyvalue)}</p>
-        `;
-
-        let itemSTKWrapper = document.createElement("div");
-        itemSTKWrapper.className = "valueWrapper";
-        itemSTKWrapper.innerHTML = `
-            <p class="valueLabel">STK Value:</p>
-            <p class="valueField">${numberWithCommas(items[i].stkvalue)}</p>
-        `;
-
         itemWrapper.appendChild(itemImage);
         itemWrapper.appendChild(itemLabel);
         itemWrapper.appendChild(itemType);
         itemWrapper.appendChild(itemMWValueWrapper);
-        itemWrapper.appendChild(itemGalaxyValueWrapper);
-        itemWrapper.appendChild(itemSTKWrapper);
+        
 
         itemDisplayWrapper.appendChild(itemWrapper);
     }

@@ -43,673 +43,505 @@ const items = [
         image: "2nd birthday blade.jpg",
         name: "Example Item",
         type: ItemTypes.KNIFE,
-        mwvalue: 170000,
-        galaxyvalue: 2750000,
-        stkvalue: 99999999
+        mwvalue: 170000
     },
     {
         image: "axe of the reaper.jpg",
         name: "Axe of the Reaper",
         type: ItemTypes.KNIFE,
-        mwvalue: 2500000,
-        galaxyvalue: 2750000,
-        stkvalue: 99999999
+        mwvalue: 2500000
     },
     {
         image: "Grimsley's Slycer.jpg",
         name: "Grimsley's Slycer",
         type: ItemTypes.KNIFE,
-        mwvalue: 3750000,
-        galaxyvalue: 2750000,
-        stkvalue: 99999999
+        mwvalue: 3750000
     },
     {
         image: "milky way.jpg",
         name: "Milky Way",
         type: ItemTypes.KNIFE,
-        mwvalue: 22500000,
-        galaxyvalue: 22000000,
-        stkvalue: 15000 
+        mwvalue: 22500000 
     },
     {
         image: "galaxy.jpg",
         name: "Galaxy",
         type: ItemTypes.KNIFE,
-        mwvalue: 200000000,
-        galaxyvalue: 200000000,
-        stkvalue: 15000 
+        mwvalue: 200000000
     },
     {
         image: "cosmic axecution.jpg",
         name: "Cosmic Axecution",
         type: ItemTypes.KNIFE,
-        mwvalue: 175000,
-        galaxyvalue: 175000,
-        stkvalue: 15000 
+        mwvalue: 175000
     },
     {
         image: "dynamite dredger.jpg",
         name: "Dynamite Dredger",
         type: ItemTypes.KNIFE,
-        mwvalue: 21000000,
-        galaxyvalue: 21000000,
-        stkvalue: 15000 
+        mwvalue: 21000000
     },
     {
         image: "Skystave.jpg",
         name: "Skystave",
         type: ItemTypes.KNIFE,
-        mwvalue: 75000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 75000
     },
     {
         image: "Void Pickaxe.jpg",
         name: "Void Pickaxe",
         type: ItemTypes.KNIFE,
-        mwvalue: 230000,
-        galaxyvalue: 250000,
-        stkvalue: 15000 
+        mwvalue: 230000 
     },
     {
         image: "Fang of Fortune.jpg",
         name: "Fang of Fortune",
         type: ItemTypes.KNIFE,
-        mwvalue: 75000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 75000 
     },
     {
         image: "Glacial Lance.jpg",
         name: "Glacial Lance",
         type: ItemTypes.KNIFE,
-        mwvalue: 100000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 100000 
     },
     {
         image: "Glacial Titan.jpg",
         name: "Glacial Titan",
         type: ItemTypes.KNIFE,
-        mwvalue: 100000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 100000
     },
     {
         image: "Snowshard Blade.jpg",
         name: "Snowshard Blade",
         type: ItemTypes.KNIFE,
-        mwvalue: 100000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 100000
     },
     {
         image: "Snuggle Slycer.jpg",
         name: "Snuggle Slycer",
         type: ItemTypes.KNIFE,
-        mwvalue: 100000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 100000
     },
     {
         image: "Frost Edge.jpg",
         name: "Frost Edge",
         type: ItemTypes.KNIFE,
-        mwvalue: 100000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 100000 
     },
     {
         image: "Ghostly Broomstick.jpg",
         name: "Ghostly Broomstick",
         type: ItemTypes.KNIFE,
-        mwvalue: 150000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 150000
     }, 
     {
         image: "Ghostly Candle.jpg",
         name: "Ghostly Candle",
         type: ItemTypes.KNIFE,
-        mwvalue: 150000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 150000 
     },
     {
         image: "Ghostly Lantern.jpg",
         name: "Ghostly Lantern",
         type: ItemTypes.KNIFE,
-        mwvalue: 150000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 150000 
     },
     {
         image: "Ghostly Scallywag.jpg",
         name: "Ghostly Scallywag",
         type: ItemTypes.KNIFE,
-        mwvalue: 150000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 150000
     },
     {
         image: "Ghostly Splinter.jpg",
         name: "Ghostly Splinter",
         type: ItemTypes.KNIFE,
-        mwvalue: 150000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 150000
     },
     {
         image: "Ghostly Webbed Hatchet.jpg",
         name: "Ghostly Webbed Hatchet",
         type: ItemTypes.KNIFE,
-        mwvalue: 150000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 150000
     },
     {
         image: "Shard of Winter.jpg",
         name: "Shard of Winter",
         type: ItemTypes.KNIFE,
-        mwvalue: 0,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 0
     },
     {
         image: "Witch's Broomstick.jpg",
         name: "Witch's Broomstick",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Arcane Candle.jpg",
         name: "Arcane Candle",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Barbaric Junk Reclaimer.jpg",
         name: "Barbaric Junk Reclaimer",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 37500,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Cursed Scallywag.jpg",
         name: "Cursed Scallywag",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 12500,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "DYN-4MO.jpg",
         name: "DYN-4MO",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 600000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Hallowed Lantern.jpg",
         name: "Hallowed Lantern",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Phaseblade Incinerator.jpg",
         name: "Phaseblade Incinerator",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 9250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Pizza Cutter.jpg",
         name: "Pizza Cutter",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "The World First Mystifier.jpg",
         name: "The World First Mystifier",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 0,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Armen's Heart.jpg",
         name: "Armen's Heart",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000
     }, 
     {
         image: "Cherished Heartblade.jpg",
         name: "Cherished Heartblade",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Cold Cupid Heartstopper.jpg",
         name: "Cold Cupid Heartstopper",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Cold Heartsplitter Axe.jpg",
         name: "Cold Heartsplitter Axe",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Heartsplitter Axe.jpg",
         name: "Heartsplitter Axe",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Radiant Desire.jpg",
         name: "Radiant Desire",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 1150000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Radiant Heartseeker.jpg",
         name: "Radiant Heartseeker",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 3250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Rudolph's Ravager.jpg",
         name: "Rudolph's Ravager",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 37500,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Umbra's Heart.jpg",
         name: "Umbra's Heart",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Glaive of the Void.jpg",
         name: "Glaive of the Void",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 300000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Northsunder.jpg",
         name: "Northsunder",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Polar Ice Wall.jpg",
         name: "Polar Ice Wall",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Polar Lance.jpg",
         name: "Polar Lance",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Polar Ravager.jpg",
         name: "Polar Ravager",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Polarbane.jpg",
         name: "Polarbane",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 150000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Polarsunder.jpg",
         name: "Polarsunder",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Squeeky Void Hammer.jpg",
         name: "Squeeky Void Hammer",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Winterbane.jpg",
         name: "Winterbane",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 75000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Searing Wand.jpg",
         name: "Searing Wand",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 37500,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Staff of the Void.jpg",
         name: "Staff of the Void",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Void Balloon Sword.jpg",
         name: "Void Balloon Sword",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Void Bat.jpg",
         name: "Void Bat",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 175000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Void Latern.jpg",
         name: "Void Latern",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 300000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Void Rune.jpg",
         name: "Void Rune",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 400000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Wand of the Void.jpg",
         name: "Wand of the Void",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 175000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Glaive of the Hallowed.jpg",
         name: "Glaive of the Hallowed",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Advernica.jpg",
         name: "Advernica",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 25000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Cactus.jpg",
         name: "Cactus",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
-    },
+        mwvalue: 25000
+    },    
     {
         image: "Dark Rune.jpg",
         name: "Dark Rune",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Harvest Lantern.jpg",
         name: "Harvest Lantern",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Marrowell.jpg",
         name: "Marrowell",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 25000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Noctis AEterna.jpg",
         name: "Noctis AEterna",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 700000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Purplexia Prime.jpg",
         name: "Purplexia Prime",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 37500,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Purplexia Rex.jpg",
         name: "Purplexia Rex",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 37500,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Tua Glas.jpg",
         name: "Tua Glas",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 125000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Claiumh Glas.jpg",
         name: "Claiumh Glas",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 175000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Cold Heart.jpg",
         name: "Cp;d Heart",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 20000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Cold Hearted Cupid's Bow.jpg",
         name: "Cold Hearted Cupid's Bow",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 325000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Cupid's Bow.jpg",
         name: "Cupid's Bow",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 200000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Devotion.jpg",
         name: "Devotion",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 200000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Empress Lillian's Bow.jpg",
         name: "Empress Lillian's Bow",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 175000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Frostbreath.jpg",
         name: "Frostbreath",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 1500000,
-        stkvalue: 15000 
+        mwvalue: 25000 
     },
     {
         image: "Gloomhammer.jpg",
         name: "Gloomhammer",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 100000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Poltergeist Scythe.jpg",
         name: "Poltergeust Scythe",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 525000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Arachnophobia.jpg",
         name: "Arachnophobia",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 800000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Cupid's Heartstopper.jpg",
         name: "Cupid's Heartstopper",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 275000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Deadly Dark Scythe.jpg",
         name: "Deadly Dark Scythe",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 1250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Permafrost.jpg",
         name: "Permafrost",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 650000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Shamrock Scimitar.jpg",
         name: "Shamrock Scimitar",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 325000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "Axe of the Fairy.jpg",
         name: "Axe of the Fairy",
         type: ItemTypes.KNIFE,
-        mwvalue: 25000,
-        galaxyvalue: 250000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "cool-image.jpg",
         name: "cool-image",
         type: ItemTypes.KILLER,
-        mwvalue: 25000,
-        galaxyvalue: 20000,
-        stkvalue: 15000 
+        mwvalue: 25000
     },
     {
         image: "cool-image.jpg",
         name: "Grimsley's Slycer",
         type: ItemTypes.CABIN,
-        mwvalue: 6,
-        galaxyvalue: 5,
-        stkvalue: 99999999
+        mwvalue: 6
     },
     {
         image: "1st Generation Crate 1.jpg",
         name: "1st Generation Crate",
         type: ItemTypes.CRATE,
-        mwvalue: 6,
-        galaxyvalue: 5,
-        stkvalue: 99999999
+        mwvalue: 6
     },
     
     
@@ -720,7 +552,7 @@ const items = [
 const tournaments = [
     {
         name: "MOST WANTED NOVEMBER SURVIVAL CHALLENGE",
-        date: new Date(Date.UTC(2025, 10, 2, 16, 0, 0, 0)),
+        date: new Date(Date.UTC(2025, 10, 9, 16, 0, 0, 0)),
         video: "MOST WANTED NOVEMBER SURVIVAL CHALLENGE.mov",
     },    
 ];
