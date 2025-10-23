@@ -1,3 +1,19 @@
+const filterOptions = [
+    "Name",
+    "Type",
+    "MW Value (low - high)",
+    "MW Value (high - low)",
+    "Galaxy Value (low - high)",
+    "Galaxy Value (high - low)",
+    "STK value (low - high)",
+    "STK value (high - low)"
+];
+
+let itemFilterText = "";
+let itemFiltered = Object.fromEntries(
+    ItemTypes.values.map(v => [v, true])
+);
+
 function removeAllChildren(element) {
     while(element.firstChild) {
         element.removeChild(element.firstChild);
@@ -46,7 +62,7 @@ function staffButton() {
         staffItemWrapper.className = "staffItemWrapper";
 
         staffItemWrapper.innerHTML = `
-            <img class="staffPicture" src="./images/staff/staff${i}.png">
+            <img class="staffPicture" src="./images/staff/${staffMembers[i].image}">
             <div class="staffLabels">
                 <div class="staffTitle">${staffMembers[i].title}</div>
                 <div class="staffNickname">${staffMembers[i].nickname}</div>
@@ -69,6 +85,72 @@ function itemsButton() {
     let itemsWrapper = document.createElement("div");
     itemsWrapper.id = "itemsWrapper";
 
+    let itemFeatureWrapper = document.createElement("div");
+    itemFeatureWrapper.id = "itemFeatureWrapper";
+
+    let itemSearchBar = document.createElement("input");
+    itemSearchBar.id = "itemSearchBar";
+    itemSearchBar.type = "search";
+    itemSearchBar.placeholder = "Search...";
+    itemSearchBar.addEventListener("input", () => {
+        itemFilterText = itemSearchBar.value;
+        updateItemFilter();
+    });
+
+    let itemSearchOptionsWrapper = document.createElement("div");
+    itemSearchOptionsWrapper.id = "itemSearchOptionsWrapper";
+
+    for (let itemType of ItemTypes.values) {
+        let filterTypeButton = document.createElement("button");
+        filterTypeButton.className = "filterTypeButton";
+        filterTypeButton.textContent = ItemTypes.toString(itemType);
+        if (itemFiltered[itemType]) {
+            filterTypeButton.style.outline = "5px solid white";
+        } else {
+            filterTypeButton.style.outline = "none";
+        }
+        filterTypeButton.addEventListener("click", () => {
+            itemFiltered[itemType] = !itemFiltered[itemType];
+            if (itemFiltered[itemType]) {
+                filterTypeButton.style.outline = "5px solid white";
+            } else {
+                filterTypeButton.style.outline = "none";
+            }
+            updateItemFilter();
+        });
+
+        itemSearchOptionsWrapper.appendChild(filterTypeButton);
+    }    
+
+    let filterDropdownWrapper = document.createElement("div");
+    filterDropdownWrapper.id = "filterDropdownWrapper";
+
+    let filterDropdownLabel = document.createElement("div");
+    filterDropdownLabel.id = "filterDropdownLabel";
+    filterDropdownLabel.textContent = "Sort by:";
+
+    let filterDropdown = document.createElement("select");
+    filterDropdown.id = "filterDropdown";
+
+    filterOptions.forEach(item => {
+        const option = document.createElement("option");
+        option.textContent = item;
+        option.value = item;
+        filterDropdown.appendChild(option);
+    });
+
+    filterDropdown.addEventListener("change", () => {
+        updateItemFilter();
+    });
+
+    filterDropdownWrapper.appendChild(filterDropdownLabel);
+    filterDropdownWrapper.appendChild(filterDropdown);
+
+    itemSearchOptionsWrapper.appendChild(filterDropdownWrapper);
+
+    itemFeatureWrapper.appendChild(itemSearchBar);
+    itemFeatureWrapper.appendChild(itemSearchOptionsWrapper);
+
     let itemDisplayWrapper = document.createElement("div");
     itemDisplayWrapper.id = "itemDisplayWrapper";
 
@@ -86,14 +168,7 @@ function itemsButton() {
 
         let itemType = document.createElement("p");
         itemType.className = "itemType";
-        switch (items[i].type) {
-            case ItemTypes.KNIFE:
-                itemType.textContent = "Knife";
-                break;
-            case ItemTypes.CABIN:
-                itemType.textContent = "Cabin";
-                break;
-        }
+        itemType.textContent = ItemTypes.toString(items[i].type);
 
         let itemMWValueWrapper = document.createElement("div");
         itemMWValueWrapper.className = "valueWrapper";
@@ -126,9 +201,12 @@ function itemsButton() {
         itemDisplayWrapper.appendChild(itemWrapper);
     }
 
+    itemsWrapper.appendChild(itemFeatureWrapper);
     itemsWrapper.appendChild(itemDisplayWrapper);
 
     document.getElementById("contentWrapper").appendChild(itemsWrapper);
+
+    updateItemFilter();
 }
 
 function tournamentsButton() {
@@ -287,6 +365,110 @@ function updateCountdown() {
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function getMWValueOfItem(itemName) {
+    let item = items.find(item => item.name === itemName);
+
+    return item.mwvalue;
+}
+
+function getGalaxyValueOfItem(itemName) {
+    let item = items.find(item => item.name === itemName);
+
+    return item.galaxyvalue;
+}
+
+function getSTKValueOfItem(itemName) {
+    let item = items.find(item => item.name === itemName);
+
+    return item.stkvalue;
+}
+
+function updateItemFilter() {
+    let items = document.getElementsByClassName("itemWrapper");
+
+    for (let item of items) {
+        let label = item.getElementsByClassName("itemLabel")[0].textContent;
+        let type = ItemTypes.fromString(item.getElementsByClassName("itemType")[0].textContent);
+
+        if ((label.toLowerCase().includes(itemFilterText.toLowerCase()) || itemFilterText == "") && (itemFiltered[type])) {
+            item.style.display = "flex";
+        } else {
+            item.style.display = "none";
+        }
+    }
+
+    if (!document.getElementById("filterDropdown")) {
+        return;
+    }
+
+    let sortValue = filterOptions.indexOf(document.getElementById("filterDropdown").value);
+
+    let itemDisplayWrapper = document.getElementById("itemDisplayWrapper")
+    let itemArray = Array.from(itemDisplayWrapper.children);
+
+    console.log(sortValue);
+    switch (sortValue) {
+        case 0:
+            itemArray.sort((a, b) => {
+                aString = a.getElementsByClassName("itemLabel")[0].textContent;
+                bString = b.getElementsByClassName("itemLabel")[0].textContent;
+                return aString.toLowerCase().localeCompare(bString.toLowerCase());
+            });
+            break;
+        case 1:
+            itemArray.sort((a, b) => {
+                aType = ItemTypes.fromString(a.getElementsByClassName("itemType")[0].textContent);
+                bType = ItemTypes.fromString(b.getElementsByClassName("itemType")[0].textContent);
+                return aType - bType;
+            });
+            break;
+        case 2:
+            itemArray.sort((a, b) => {
+                aMWvalue = getMWValueOfItem(a.getElementsByClassName("itemLabel")[0].textContent);
+                bMWvalue = getMWValueOfItem(b.getElementsByClassName("itemLabel")[0].textContent);
+                return aMWvalue - bMWvalue;
+            });
+            break;
+        case 3:
+            itemArray.sort((a, b) => {
+                aMWvalue = getMWValueOfItem(a.getElementsByClassName("itemLabel")[0].textContent);
+                bMWvalue = getMWValueOfItem(b.getElementsByClassName("itemLabel")[0].textContent);
+                return bMWvalue - aMWvalue;
+            });
+            break;
+        case 4:
+            itemArray.sort((a, b) => {
+                aGalaxyvalue = getGalaxyValueOfItem(a.getElementsByClassName("itemLabel")[0].textContent);
+                bGalaxyvalue = getGalaxyValueOfItem(b.getElementsByClassName("itemLabel")[0].textContent);
+                return aGalaxyvalue - bGalaxyvalue;
+            });
+            break;
+        case 5:
+            itemArray.sort((a, b) => {
+                aGalaxyvalue = getGalaxyValueOfItem(a.getElementsByClassName("itemLabel")[0].textContent);
+                bGalaxyvalue = getGalaxyValueOfItem(b.getElementsByClassName("itemLabel")[0].textContent);
+                return bGalaxyvalue - aGalaxyvalue;
+            });
+            break;
+        case 6:
+            itemArray.sort((a, b) => {
+                aSTKvalue = getSTKValueOfItem(a.getElementsByClassName("itemLabel")[0].textContent);
+                bSTKvalue = getSTKValueOfItem(b.getElementsByClassName("itemLabel")[0].textContent);
+                return aSTKvalue - bSTKvalue;
+            });
+            break;
+        case 7:
+            itemArray.sort((a, b) => {
+                aSTKvalue = getSTKValueOfItem(a.getElementsByClassName("itemLabel")[0].textContent);
+                bSTKvalue = getSTKValueOfItem(b.getElementsByClassName("itemLabel")[0].textContent);
+                return bSTKvalue - aSTKvalue;
+            });
+            break;
+    }
+
+    itemArray.forEach(itemElement => itemDisplayWrapper.appendChild(itemElement));
 }
 
 window.setInterval(updateCountdown, 200);

@@ -123,6 +123,11 @@ body {
     top: 100px;
     position: relative;
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 #communityWrapper {
@@ -333,7 +338,7 @@ body {
     background-color: #222;
     border: 5px solid black;
     padding: 20px;
-    max-width: 80%;
+    width: 80%;
 }
 
 .itemWrapper {
@@ -341,9 +346,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: purple;
+    background-color: rgb(151, 118, 40);
     padding: 10px;
-    border: 3px solid black;
+    border: 3px solid rgb(8, 8, 8);
     color: white;
     width: 150px;
     margin: 20px;
@@ -380,4 +385,48 @@ body {
     font-size: 16px;
     text-align: right;
     margin: 0;
+}
+
+#itemFeatureWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#itemSearchBar {
+    font-size: 32px;
+    width: 60%;
+    margin: 30px;
+}
+
+#itemSearchOptionsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.filterTypeButton {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+#filterDropdownWrapper {
+    margin: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filterDropdownLabel {
+    font-size: 24px;
+    color: white;
+}
+
+#filterDropdown {
+    font-size: 24px;
+    margin-left: 8px;
 }
