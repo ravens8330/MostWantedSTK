@@ -430,3 +430,144 @@ body {
     font-size: 24px;
     margin-left: 8px;
 }
+
+/* Leaderboard Styling */
+#leaderboardWrapper {
+    margin-top: 60px;
+    background-color: #222;
+    border: 4px solid black;
+    border-radius: 8px;
+    padding: 20px 40px;
+    color: white;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+#leaderboardTitle {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: gold;
+    text-shadow: 0 0 10px black, 0 0 10px black;
+}
+
+#leaderboardList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboardItem {
+    font-size: 28px;
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid gold;
+}
+
+
+
+.trade-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            margin: 20px;
+            background: rgba(2, 1, 1, 0.629);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .side {
+            width: 48%;
+
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+        }
+
+        .total {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #ffdd57;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        .slot-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            align-items: center;
+        }
+
+        .slot {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: rgba(52, 69, 59, 0);
+            border: 2px solid #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 12px;
+            position: relative;
+            transition: border 0.3s;
+        }
+
+        .slot:hover {
+            border-color: #ffdd57;
+        }
+
+        .slot.selected {
+            border-color: #ffd700;
+        }
+
+        .slot img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .plus-sign {
+            font-size: 32px;
+            color: #999;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Default: mobile portrait */
+            gap: 20px;
+            padding: 0 30px 30px 30px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #c559d3, #a3e0f6);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 3px solid #444;
+            position: relative;
+            transition: transform 0.3s;
+            height: auto;
+            /* allow content to define height */
+            min-height: 430px;
+            /* enough space for mobile */
+        }
+
+
+#tradeCalculatorWrapper {
+    width: 90%;
+}

@@ -16,6 +16,8 @@ function removeAllChildren(element) {
     }
 }
 
+// This function tells the page what to display when you click on the home button
+// This function tells the page what to display when you click on the home button
 function homeButton() {
     removeAllChildren(document.getElementById("contentWrapper"));
 
@@ -30,16 +32,62 @@ function homeButton() {
     homeDescription.id = "homeDescription";
     homeDescription.innerHTML = `Welcome to Most Wanted,
         where the values are popping and our Farmers are grinding.
-        Don’t miss out on our high flying action of our Most Wanted tournaments. We are a community of courteous individuals and respectfulness. 
+        Don’t miss out on our high flying action of our Most Wanted tournaments and gamenights. We are a community of courteous individuals and respectfulness. 
         Join in on the fun and can’t wait to see you there!<br><br><br>
         Thank you,<br>
             The MW Staff`;
 
+    // Create leaderboard section (below description)
+    let leaderboardWrapper = document.createElement("div");
+    leaderboardWrapper.id = "leaderboardWrapper";
+
+    let leaderboardTitle = document.createElement("h2");
+    leaderboardTitle.id = "leaderboardTitle";
+    leaderboardTitle.textContent = "🏆 Current Leaderboard";
+
+    // Example leaderboard items — replace with real data later
+    let leaderboardList = document.createElement("ul");
+    leaderboardList.id = "leaderboardList";
+
+    const leaderboardData = [
+        { rank: "1st", name: "Daniel", points: 6320 },
+        { rank: "2nd", name: "Mini", points: 5380 },
+        { rank: "3rd", name: "Crimson", points: 5260 },
+        { rank: "4th", name: "Bama", points: 4700 },
+        { rank: "5th", name: "Raven", points: 4580 },
+        { rank: "6th", name: "Karma", points: 3200 },
+        { rank: "7th", name: "Mambas", points: 3000 },
+        { rank: "8th", name: "Spawn", points: 2240 },
+        { rank: "9th", name: "Angel", points: 2200 },
+        { rank: "10th", name: "Kiso", points: 1620 }
+               
+    ];
+
+    for (let i = 0; i < leaderboardData.length; i++) {
+        let player = leaderboardData[i];
+        const li = document.createElement("li");
+        li.className = "leaderboardItem";
+        li.textContent = `${i+1}. ${player.name} — ${player.points} points`;
+        leaderboardList.appendChild(li);
+    }
+    // leaderboardData.forEach(player => {
+    //     const li = document.createElement("li");
+    //     li.className = "leaderboardItem";
+    //     li.textContent = `${player.rank} ${player.name} — ${player.points} points`;
+    //     leaderboardList.appendChild(li);
+    // });
+
+    leaderboardWrapper.appendChild(leaderboardTitle);
+    leaderboardWrapper.appendChild(leaderboardList);
+
+    // Append in order — description first, leaderboard below it
     homeWrapper.appendChild(homeTitle);
     homeWrapper.appendChild(homeDescription);
+    homeWrapper.appendChild(leaderboardWrapper);
 
     document.getElementById("contentWrapper").appendChild(homeWrapper);
 }
+
 
 function staffButton() {
     removeAllChildren(document.getElementById("contentWrapper"));
@@ -181,6 +229,51 @@ function itemsButton() {
 
         itemDisplayWrapper.appendChild(itemWrapper);
     }
+
+    let tradeCalculator = document.createElement("div");
+
+    tradeCalculator.innerHTML = `
+        <div align="center">
+            <font color="white">
+                <h2>TRADE CALCULATOR</h2>
+            </font>
+        </div>
+
+        <div class="trade-container">
+            <div class="side" id="you-side">
+                <div class="total">TRADE VALUE: <span>0</span></div>
+                <div class="slot-grid">
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                </div>
+                <div style="text-align:center;color:white; font-size:24px;margin-top:10px;"><u>YOU</u></div>
+            </div>
+
+            <div class="side" id="them-side">
+                <div class="total">TRADE VALUE: <span>0</span></div>
+                <div class="slot-grid">
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                    <div class="slot plus-slot"></div>
+                </div>
+                <div style="text-align:center; font-size:24px;color:white;margin-top:10px;"><u>THEM</u></div>
+            </div>
+        </div>
+    `;
+    tradeCalculator.id = "tradeCalculatorWrapper";
+
+    itemsWrapper.appendChild(tradeCalculator);
 
     itemsWrapper.appendChild(itemFeatureWrapper);
     itemsWrapper.appendChild(itemDisplayWrapper);
