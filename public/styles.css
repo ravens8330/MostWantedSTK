@@ -519,6 +519,21 @@ body {
             transition: border 0.3s;
         }
 
+        .itemInSlot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemInSlot .itemImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* or cover, depending on your preference */
+    pointer-events: none; /* prevents accidental drag issues */
+}
+
         .slot:hover {
             border-color: #ffdd57;
         }
@@ -570,4 +585,37 @@ body {
 
 #tradeCalculatorWrapper {
     width: 90%;
+    position: sticky;
+    top: 0;
+
+}
+
+#homepageCarousel {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    margin: 30px auto;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#carouselTrack {
+    width: 100%;
+    height: 100%;
+}
+
+.carouselSlide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselSlide img,
+.carouselSlide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
