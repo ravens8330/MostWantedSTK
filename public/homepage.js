@@ -96,6 +96,10 @@ function homeButton() {
     let homeWrapper = document.createElement("div");
     homeWrapper.id = "homeWrapper";
 
+    let homeMiddleImage = document.createElement("img");
+    homeMiddleImage.src = "https://i.postimg.cc/zv0tZy5j/image.png";
+    homeMiddleImage.id = "homeMiddleImage";
+
     let homeTitle = document.createElement("p");
     homeTitle.id = "homeTitle";
     homeTitle.textContent = "Most Wanted";
@@ -197,14 +201,107 @@ function homeButton() {
     startCarousel();
 
     // ===============================
+    // FOOTER SECTION (YELLOW/GOLD/BLACK)
+    // ===============================
+    const footer = document.createElement("footer");
+    footer.className = "mw-footer";
+
+    footer.innerHTML = `
+        <div class="mw-footer-inner">
+
+            <div class="mw-footer-top">
+                <div class="mw-footer-brand">
+                    <div class="mw-footer-logo">MOST WANTED</div>
+                    <div class="mw-footer-tagline">Official Links • Credits • Community</div>
+                </div>
+
+                <div class="mw-footer-links">
+                    <div class="mw-footer-section">
+                        <h3>Official Links</h3>
+
+                        <a class="mw-footer-link" href="https://discord.gg/UbhbgPrv" target="_blank">
+                            Most Wanted Discord Server
+                        </a>
+
+                        <a class="mw-footer-link" href="https://www.roblox.com/communities/35553608/Most-Wanted#!/about" target="_blank">
+                            Most Wanted Roblox Community
+                        </a>
+
+                        <a class="mw-footer-link" href="https://www.youtube.com/@mostwanted-w5d" target="_blank">
+                            Most Wanted YouTube
+                        </a>
+                    </div>
+
+                    <div class="mw-footer-section">
+                        <h3>Owners</h3>
+                        <div class="mw-footer-userlist">
+                        <a class="mw-footer-user" href="https://www.roblox.com/users/profile?username=luna131583" target="_blank">
+                                @luna131583
+                            </a>
+                            <a class="mw-footer-user" href="https://www.roblox.com/users/profile?username=fl0wers4days" target="_blank">
+                                @fl0wers4days
+                            </a>
+                            <a class="mw-footer-user" href="https://www.roblox.com/users/profile?username=XxxTh3_GoatxxX" target="_blank">
+                                @XxxTh3_GoatxxX
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mw-footer-section">
+                        <h3>Team</h3>
+
+                        <div class="mw-footer-role">
+                            <span class="mw-footer-role-title">Community Manager</span>
+                            <a class="mw-footer-user" href="https://www.roblox.com/users/profile?username=BamaRoo22" target="_blank">
+                                @BamaRoo22
+                            </a>
+                        </div>
+
+                        <div class="mw-footer-role">
+                            <span class="mw-footer-role-title">Website Developer</span>
+                            <a class="mw-footer-user" href="https://www.roblox.com/users/profile?username=ravens8330" target="_blank">
+                                @ravens8330
+                            </a>
+                        </div>
+
+                        <div class="mw-footer-role">
+                            <span class="mw-footer-role-title">Website Designer</span>
+                            <a class="mw-footer-user" href="https://www.roblox.com/users/profile?username=XZop0999" target="_blank">
+                                @XZop0999
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mw-footer-bottom">
+                <span>© <span id="mwYear"></span> Most Wanted. All rights reserved.</span>
+                <span class="mw-footer-divider">•</span>
+                <span class="mw-footer-mini">Yellow • Gold • Black Theme</span>
+            </div>
+
+        </div>
+    `;
+
+    // ===============================
     // APPEND CONTENT IN ORDER
     // ===============================
     homeWrapper.appendChild(homeTitle);
     homeWrapper.appendChild(homeDescription);
     homeWrapper.appendChild(carouselWrapper);
 
+    // Add footer under everything
+    homeWrapper.appendChild(footer);
+
     document.getElementById("contentWrapper").appendChild(homeWrapper);
+
+    // Set footer year
+    const yearEl = document.getElementById("mwYear");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
+
+
+
 
 
 function staffButton() {
