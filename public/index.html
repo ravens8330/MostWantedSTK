@@ -22,7 +22,52 @@
     <div id="contentWrapper">
 
     </div>
+
+    
+
+<script>
+  document.getElementById("mwYear").textContent = new Date().getFullYear();
+</script>
+
+    <div class="fireflies"></div>
+
+    <script>
+  const fireflyContainer = document.querySelector(".fireflies");
+
+  const totalFireflies = 45; // 🔥 more fireflies
+
+  for (let i = 0; i < totalFireflies; i++) {
+    const firefly = document.createElement("div");
+    firefly.classList.add("firefly");
+
+    // Random starting position
+    firefly.style.left = Math.random() * window.innerWidth + "px";
+    firefly.style.top = Math.random() * window.innerHeight + "px";
+
+    // Random size (bigger + visible)
+    const size = Math.random() * 14 + 10; // 10px - 24px
+    firefly.style.width = size + "px";
+    firefly.style.height = size + "px";
+
+    // Random movement range (more floaty)
+    const moveX = (Math.random() * 700 - 350) + "px";
+    const moveY = (Math.random() * 700 - 350) + "px";
+
+    firefly.style.setProperty("--moveX", moveX);
+    firefly.style.setProperty("--moveY", moveY);
+
+    // Random speed
+    const moveDuration = Math.random() * 10 + 6; // 6s - 16s
+    const flickerDuration = Math.random() * 2 + 1; // 1s - 3s
+
+    firefly.style.animationDuration = `${moveDuration}s, ${flickerDuration}s`;
+
+    fireflyContainer.appendChild(firefly);
+  }
+</script>
+
     <script src="./constants.js"></script>
-    <script src="./homepage.js"></script>
+    <script src="./mwtest.js"></script>
+    
   </body>
 </html>
