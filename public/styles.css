@@ -22,7 +22,7 @@ body {
     height: 100vh;
 }
 
-#header { 
+#header {
     background-color: black;
     height: 50px;
     display: flex;
@@ -40,7 +40,7 @@ body {
     margin: 10px;
     font-size: 30px;
     -webkit-appearance: none;
-    -moz-appearance: none; 
+    -moz-appearance: none;
     appearance: none;
     background-color: transparent;
     border: 0;
@@ -119,7 +119,7 @@ body {
     margin-bottom: 100px;
 }
 
-#itemsWrapper { 
+#itemsWrapper {
     top: 100px;
     position: relative;
     margin-bottom: 100px;
@@ -467,59 +467,59 @@ body {
 
 
 .trade-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 20px;
-            margin: 20px;
-            background: rgba(2, 1, 1, 0.629);
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-        }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(2, 1, 1, 0.629);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
 
-        .side {
-            width: 48%;
+.side {
+    width: 48%;
 
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
-        }
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
 
-        .total {
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 16px;
-            color: #ffdd57;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 8px;
-            border-radius: 10px;
-        }
+.total {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ffdd57;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    border-radius: 10px;
+}
 
-        .slot-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            align-items: center;
-        }
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+}
 
-        .slot {
-            width: 100%;
-            aspect-ratio: 1/1;
-            background: rgba(52, 69, 59, 0);
-            border: 2px solid #888;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border-radius: 12px;
-            position: relative;
-            transition: border 0.3s;
-        }
+.slot {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: rgba(52, 69, 59, 0);
+    border: 2px solid #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+    transition: border 0.3s;
+}
 
-        .itemInSlot {
+.itemInSlot {
     width: 100%;
     height: 100%;
     display: flex;
@@ -530,57 +530,59 @@ body {
 .itemInSlot .itemImage {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* or cover, depending on your preference */
-    pointer-events: none; /* prevents accidental drag issues */
+    object-fit: contain;
+    /* or cover, depending on your preference */
+    pointer-events: none;
+    /* prevents accidental drag issues */
 }
 
-        .slot:hover {
-            border-color: #ffdd57;
-        }
+.slot:hover {
+    border-color: #ffdd57;
+}
 
-        .slot.selected {
-            border-color: #ffd700;
-        }
+.slot.selected {
+    border-color: #ffd700;
+}
 
-        .slot img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            border-radius: 8px;
-        }
+.slot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
-        .plus-sign {
-            font-size: 32px;
-            color: #999;
-        }
+.plus-sign {
+    font-size: 32px;
+    color: #999;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* Default: mobile portrait */
-            gap: 20px;
-            padding: 0 30px 30px 30px;
-            box-sizing: border-box;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Default: mobile portrait */
+    gap: 20px;
+    padding: 0 30px 30px 30px;
+    box-sizing: border-box;
+}
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-            background: linear-gradient(to bottom, #c559d3, #a3e0f6);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border: 3px solid #444;
-            position: relative;
-            transition: transform 0.3s;
-            height: auto;
-            /* allow content to define height */
-            min-height: 430px;
-            /* enough space for mobile */
-        }
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #c559d3, #a3e0f6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid #444;
+    position: relative;
+    transition: transform 0.3s;
+    height: auto;
+    /* allow content to define height */
+    min-height: 430px;
+    /* enough space for mobile */
+}
 
 
 #tradeCalculatorWrapper {
@@ -619,3 +621,223 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/* ================================
+   MOST WANTED FOOTER (FULL WIDTH + CLEAN)
+================================ */
+
+.mw-footer {
+    width: 125%;
+    background: linear-gradient(180deg, #0b0b0b 0%, #000 100%);
+    border-top: 3px solid #ffd700;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    padding: 0;
+}
+
+/* Full width background, content stays centered */
+.mw-footer-inner {
+    max-width: 1300px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.mw-footer-top {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* LEFT BRAND */
+.mw-footer-brand {
+    flex: 1;
+    min-width: 260px;
+}
+
+.mw-footer-logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffd700;
+    text-shadow: 0 0 18px rgba(255, 215, 0, 0.35);
+}
+
+.mw-footer-tagline {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+/* RIGHT GRID */
+.mw-footer-links {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+/* FOOTER CARDS */
+.mw-footer-section {
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.12), rgba(255, 215, 0, 0.04));
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    border-radius: 18px;
+    padding: 16px 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft glow line */
+.mw-footer-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    opacity: 0.8;
+}
+
+.mw-footer-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    font-weight: 900;
+    color: #ffd700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* LINKS / USERNAMES */
+.mw-footer-link,
+.mw-footer-user {
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+    transition: 0.18s ease-in-out;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+/* Hover highlight */
+.mw-footer-link:hover,
+.mw-footer-user:hover {
+    color: #000;
+    background: #ffd700;
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.35);
+    transform: translateX(4px);
+}
+
+/* Role titles */
+.mw-footer-role {
+    margin-bottom: 12px;
+}
+
+.mw-footer-role-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: rgba(255, 215, 0, 0.9);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Bottom bar */
+.mw-footer-bottom {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 215, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.mw-footer-divider {
+    opacity: 0.4;
+}
+
+.mw-footer-mini {
+    color: rgba(255, 215, 0, 0.85);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .mw-footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .mw-footer-brand {
+        text-align: center;
+    }
+
+    .mw-footer-inner {
+        padding: 28px 14px;
+    }
+}
+
+.fireflies {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.firefly {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    /* MUCH more visible */
+    background: radial-gradient(circle,
+            rgba(255, 255, 180, 1) 0%,
+            rgba(255, 215, 80, 0.9) 35%,
+            rgba(255, 170, 0, 0.15) 70%,
+            rgba(255, 170, 0, 0) 100%);
+
+    filter: blur(3px);
+    opacity: 1;
+
+    /* Glow effect */
+    box-shadow:
+        0 0 12px rgba(255, 210, 90, 0.9),
+        0 0 25px rgba(255, 190, 60, 0.7),
+        0 0 45px rgba(255, 160, 0, 0.35);
+
+    animation: floatMove linear infinite, flicker ease-in-out infinite;
+}
+
+@keyframes floatMove {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate3d(var(--moveX), var(--moveY), 0) scale(1.4);
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
